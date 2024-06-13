@@ -1,6 +1,8 @@
-console.log("\n\n--------------------------------------------------------------");
+console.log(
+  "\n\n--------------------------------------------------------------"
+);
 // First assignmet
-console.log("01-Assignment")
+console.log("01-Assignment");
 
 /*1.- Declare variables called country, continent and population and assign their values according to your own country (population in millions).*/
 let countryy;
@@ -12,7 +14,7 @@ continentt = "Europe";
 population = 10;
 
 /*2.- Log their values to the console.*/
-console.log("These are my details\n")
+console.log("These are my details\n");
 console.log("Country: " + countryy);
 console.log("Continent: " + continentt);
 console.log("Population: " + population);
@@ -27,7 +29,7 @@ let language;
 /* 2.- Log the types of isIsland, population, country and language to the console. */
 
 console.log("Tipo de la variable isIsland: " + typeof isIslandd);
-console.log("Tipo de la varaible population: " + typeof population)
+console.log("Tipo de la varaible population: " + typeof population);
 console.log("Tipo de la variable country: " + typeof countryy);
 console.log("Tipo de la variable language: " + typeof language);
 
