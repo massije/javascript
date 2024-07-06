@@ -39,14 +39,15 @@ console.log(
 // Third Challenge
 console.log("03-Challenge");
 const numberOfGames = 3;
+const minScore = 100;
 
-const scoreGame1Dolphins = 96;
-const scoreGame2Dolphins = 108;
-const scoreGame3Dolphins = 89;
+const scoreGame1Dolphins = 97;
+const scoreGame2Dolphins = 112;
+const scoreGame3Dolphins = 80;
 
-const scoreGame1Koalas = 88;
-const scoreGame2Koalas = 91;
-const scoreGame3Koalas = 110;
+const scoreGame1Koalas = 109;
+const scoreGame2Koalas = 95;
+const scoreGame3Koalas = 50;
 
 const scoreDolphins =
   (scoreGame1Dolphins + scoreGame2Dolphins + scoreGame3Dolphins) /
@@ -54,10 +55,20 @@ const scoreDolphins =
 const scoreKoalas =
   (scoreGame1Koalas + scoreGame2Koalas + scoreGame3Koalas) / numberOfGames;
 
-if (scoreDolphins === scoreKoalas) {
+console.log(`Dolphins' score: ${scoreDolphins}\nKoalas' score: ${scoreKoalas}`);
+
+if (
+  scoreDolphins === scoreKoalas &&
+  scoreDolphins >= minScore &&
+  scoreKoalas >= minScore
+) {
   console.log("Both win the trophy");
-} else if (scoreDolphins > scoreKoalas) {
-  console.log("Dolphins win the trophy");
+} else if (scoreDolphins >= minScore || scoreKoalas >= minScore) {
+  if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the trophy");
+  } else {
+    console.log("Koalas win the trophy");
+  }
 } else {
-  console.log("Koalas win the trophy");
+  console.log(`Minimun score is not ${minScore}\nNo one wins the trophy`);
 }
