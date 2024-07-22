@@ -72,3 +72,17 @@ if (
 } else {
   console.log(`Minimun score is not ${minScore}\nNo one wins the trophy`);
 }
+
+console.log(
+  "\n\n--------------------------------------------------------------"
+);
+// Fourth Challenge
+console.log("04-Challenge");
+
+const bill = 275;
+const percentage = bill >= 50 && bill <= 300 ? 15 : 20;
+const tip = (bill * percentage) / 100;
+
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
