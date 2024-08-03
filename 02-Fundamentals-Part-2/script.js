@@ -92,4 +92,85 @@ const yearUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearUntilRetirement(1950, "Jorge"));
 
+
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const years1 = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jorge";
+console.log(friends);
+
+const firstName = "Jorge Martin";
+const jorge = [
+  firstName,
+  "Del Pino Contreras",
+  2024 - 1997,
+  "student",
+  friends,
+];
+console.log(jorge);
+console.log(jorge.length);
+
+// Exercise
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
+
+
+const friends = ["Michael", "Steven", "Peter"];
+
+// Add elements
+// add one element at the end of the array
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+// add one element at the beginning of the array
+friends.unshift("Jorge");
+console.log(friends);
+
+// Remove elements
+// remove the last elements of the array
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+console.log(friends.pop());
+console.log(friends);
+
+// remove the first element of the array
+console.log(friends.shift());
+console.log(friends);
+
+console.log(friends.indexOf("Steven")); // return the position of the element in the array
+
+console.log(friends.includes("Steven")); // return true if the elements is in the array and false if not.
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+} else {
+  console.log("that person dont exist in this list");
+}
+
 */
