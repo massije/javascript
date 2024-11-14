@@ -37,7 +37,8 @@ console.log(
 // Second Challenge
 console.log("02-Challenge");
 
-const calcTip = (bill) => (bill > 50 && bill < 300 ? 0.15 * bill : 0.2 * bill);
+const calcTip = (bill) =>
+  bill >= 50 && bill <= 300 ? 0.15 * bill : 0.2 * bill;
 const bills = [125, 555, 44];
 const tips = [
   calcTip(bills[0]),
@@ -53,3 +54,76 @@ const total = [
 
 console.log(tips);
 console.log(total);
+
+console.log(
+  "\n\n--------------------------------------------------------------"
+);
+// Third Challenge
+console.log("03-Challenge");
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.bmi = Math.round((this.mass / (this.height * this.height)) * 10) / 10;
+    return this.bmi;
+  },
+};
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.bmi = Math.round((this.mass / (this.height * this.height)) * 10) / 10;
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi < john.bmi) {
+  console.log(
+    `${john.fullName} BMI (${john.bmi}) is higher than ${mark.fullName} (${mark.bmi})`
+  );
+} else {
+  console.log(
+    `${mark.fullName} BMI (${mark.bmi}) is higher than ${john.fullName} (${john.bmi})`
+  );
+}
+
+console.log(
+  "\n\n--------------------------------------------------------------"
+);
+// Fourth Challenge
+console.log("04-Challenge");
+
+const calcTipp = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const calcAverageArray = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+
+const billss = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tipss = [];
+const totals = [];
+
+for (let i = 0; i < billss.length; i++) {
+  tipss.push(calcTipp(billss[i]));
+  totals.push(tipss[i] + billss[i]);
+}
+
+console.log(`tips: ${tipss}`);
+console.log(`totals: ${totals}`);
+console.log(`Average: ${calcAverageArray(totals)}`);
+console.log(calcAverageArray([2, 3, 7]));
